@@ -2,6 +2,7 @@ DATE = $(shell date +%I:%M%p)
 GRIZZLY = ./src/grizzly.less
 GRIZZLY_RESPONSIVE = ./src/grizzly-responsive.less
 GRIZZLY_BOOTSTRAP = ./src/bootstrap-grizzly.less
+GRIZZLY_BOOTSTRAP_RESPONSIVE = ./src/bootstrap-grizzly-responsive.less
 PROJECTNAME = grizzly
 CHECKED=\033[32m✔\033[39m
 HR = \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
@@ -42,6 +43,8 @@ bootstrap:
 	@echo "  Create the Bootstrap-Folder ...                         ${CHECKED} Done"
 	@lessc ${GRIZZLY_BOOTSTRAP} ${PROJECTNAME}/bootstrap/css/bootstrap-${PROJECTNAME}.css
 	@lessc --compress ${GRIZZLY_BOOTSTRAP} ${PROJECTNAME}/bootstrap/css/bootstrap-${PROJECTNAME}.min.css
+	@lessc ${GRIZZLY_BOOTSTRAP_RESPONSIVE} ${PROJECTNAME}/bootstrap/css/bootstrap-${PROJECTNAME}-responsive.css
+	@lessc --compress ${GRIZZLY_BOOTSTRAP_RESPONSIVE} ${PROJECTNAME}/bootstrap/css/bootstrap-${PROJECTNAME}-responsive.min.css
 	@echo "  Compiling LESS ...                                      ${CHECKED} Done"
 	@echo "Bootstrap-Extensions successfully built at ${DATE}."
 	@echo "${HR}${HR}\n"
