@@ -1,0 +1,51 @@
+// Skeleton
+///////////////////////////////////////////////////////////
+
+// Body
+// --------------------------------------------------------
+body {
+  background-color: @bodyBackground;
+  color: @bodyTextColor;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  font-weight: @baseFontWeight;
+  line-height: @baseLineHeight;
+  margin: 0;
+}
+
+
+// Hyperlinks
+// --------------------------------------------------------
+a {
+  color: @hyperlinkTextColor;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: @hyperlinkTextColorHover;
+  text-decoration: underline;
+}
+
+
+// Container
+// --------------------------------------------------------
+.container,
+.container-fluid {
+  .clearfix();
+
+  display: block;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: @gridWidth;
+}
+
+.container-fluid {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}

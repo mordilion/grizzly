@@ -1,0 +1,145 @@
+// Typography
+///////////////////////////////////////////////////////////
+
+// Text
+// --------------------------------------------------------
+p {
+  margin: 0 0 (@baseLineHeight / 2);
+}
+
+.lead {
+  font-size: @baseFontSize * 1.5;
+  line-height: @baseLineHeight * 1.5;
+  margin-bottom: @baseLineHeight;
+}
+
+
+// Accent and miscs
+// --------------------------------------------------------
+cite {
+  font-style: normal;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+// Headings
+// --------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  color: @headingTextColor;
+  font-family: @headingFontFamily;
+  font-weight: @headingFontWeight;
+  margin: (@baseLineHeight / 2) 0;
+  text-rendering: optimizelegibility;
+
+  small {
+    color: @grayLight;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+h1,
+h2,
+h3 {
+  line-height: @baseLineHeight * 2;
+}
+
+h1 {
+  font-size: @baseFontSize * 2.5;
+
+  small {
+    font-size: @baseFontSize * 1.75;
+  }
+}
+
+h2 {
+  font-size: @baseFontSize * 2;
+
+  small {
+    font-size: @baseFontSize * 1.25;
+  }
+}
+
+h3 {
+  font-size: @baseFontSize * 1.5;
+
+  small {
+    font-size: @baseFontSize;
+  }
+}
+
+h4 {
+  font-size: @baseFontSize * 1.25;
+
+  small {
+    font-size: @baseFontSize;
+  }
+}
+
+h5 {
+  font-size: @baseFontSize;
+}
+
+h6 {
+  font-size: @baseFontSize * 0.85;
+}
+
+
+// Lists
+// --------------------------------------------------------
+ul,
+ol {
+  margin: 0 0 (@baseLineHeight / 2) (@baseLineHeight * 1.25);
+  padding: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  line-height: @baseLineHeight;
+}
+
+dl {
+  margin-bottom: @baseLineHeight;
+}
+
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: @baseLineHeight / 2;
+}

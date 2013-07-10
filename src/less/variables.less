@@ -1,0 +1,123 @@
+// Variables
+///////////////////////////////////////////////////////////
+
+// Grayscale-Colors
+// --------------------------------------------------------
+@black:                                       #000000;
+@grayDarkest:                                 #111111;
+@grayDarker:                                  #222222;
+@grayDark:                                    #444444;
+@gray:                                        #777777;
+@grayLight:                                   #BBBBBB;
+@grayLighter:                                 #DDDDDD;
+@grayLightest:                                #EEEEEE;
+@grayXLight:                                  #F5F5F7; // a small breath of blue
+@white:                                       #FFFFFF;
+
+
+// Colorful-Colors ;)
+// --------------------------------------------------------
+@blue:                                        #2070B0;
+@cyan:                                        #20B0D0;
+@green:                                       #40A040;
+@orange:                                      #E07000;
+@red:                                         #B03020;
+
+
+// Skeleton
+// --------------------------------------------------------
+@bodyBackground:                              @white;
+@bodyTextColor:                               @grayDark;
+@baseBorderRadius:                            4px;
+
+
+// Typography
+// --------------------------------------------------------
+@fontFamilySansSerif:                         "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilySerif:                             Georgia, "Times New Roman", Times, serif;
+@fontFamilyMonospace:                         Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontFamily:                              @fontFamilySansSerif;
+@baseFontSize:                                14px;
+@baseFontWeight:                              normal;
+@baseLineHeight:                              20px;
+
+@headingFontFamily:                           @baseFontFamily;
+@headingFontWeight:                           bold;
+@headingTextColor:                            @bodyTextColor;
+
+@codeFontFamily:                              @fontFamilyMonospace;
+
+
+// Hyperlinks
+// --------------------------------------------------------
+@hyperlinkTextColor:                          @blue;
+@hyperlinkTextColorHover:                     darken(@hyperlinkTextColor, 10%);
+
+
+// Grid-System
+// --------------------------------------------------------
+@gridWidth:                                   940px;
+@gridWidth1200:                               1170px;
+@gridWidth768:                                700px; //724px;
+
+// Grid12
+@grid12GutterWidth:                           20px;
+@grid12GutterWidth1200:                       30px;
+@grid12GutterWidth768:                        20px;
+@grid12ColumnWidth:                           ((@gridWidth - (@grid12GutterWidth * 12)) / 12) + (@grid12GutterWidth / 12);
+@grid12ColumnWidth1200:                       ((@gridWidth1200 - (@grid12GutterWidth1200 * 12)) / 12) + (@grid12GutterWidth1200 / 12);
+@grid12ColumnWidth768:                        ((@gridWidth768 - (@grid12GutterWidth768 * 12)) / 12) + (@grid12GutterWidth768 / 12);
+
+// Grid16
+@grid16GutterWidth:                           20px;
+@grid16GutterWidth1200:                       30px;
+@grid16GutterWidth768:                        20px;
+@grid16ColumnWidth:                           ((@gridWidth - (@grid16GutterWidth * 16)) / 16) + (@grid16GutterWidth / 16);
+@grid16ColumnWidth1200:                       ((@gridWidth1200 - (@grid16GutterWidth1200 * 16)) / 16) + (@grid16GutterWidth1200 / 16);
+@grid16ColumnWidth768:                        ((@gridWidth768 - (@grid16GutterWidth768 * 16)) / 16) + (@grid16GutterWidth768 / 16);
+
+// Grid20
+@grid20GutterWidth:                           20px;
+@grid20GutterWidth1200:                       30px;
+@grid20GutterWidth768:                        20px;
+@grid20ColumnWidth:                           ((@gridWidth - (@grid20GutterWidth * 20)) / 20) + (@grid20GutterWidth / 20);
+@grid20ColumnWidth1200:                       ((@gridWidth1200 - (@grid20GutterWidth1200 * 20)) / 20) + (@grid20GutterWidth1200 / 20);
+@grid20ColumnWidth768:                        ((@gridWidth768 - (@grid20GutterWidth768 * 20)) / 20) + (@grid20GutterWidth768 / 20);
+
+// Grid24
+@grid24GutterWidth:                           20px;
+@grid24GutterWidth1200:                       30px;
+@grid24GutterWidth768:                        20px;
+@grid24ColumnWidth:                           ((@gridWidth - (@grid24GutterWidth * 24)) / 24) + (@grid24GutterWidth / 24);
+@grid24ColumnWidth1200:                       ((@gridWidth1200 - (@grid24GutterWidth1200 * 24)) / 24) + (@grid24GutterWidth1200 / 24);
+@grid24ColumnWidth768:                        ((@gridWidth768 - (@grid24GutterWidth768 * 24)) / 24) + (@grid24GutterWidth768 / 24);
+
+
+// Buttons
+// --------------------------------------------------------
+@buttonBackgroundEndColor:                    @grayLighter;
+@buttonBackgroundStartColor:                  lighten(@buttonBackgroundEndColor, 20%);
+
+@buttonBackgroundEndColorPrimary:             @blue;
+@buttonBackgroundStartColorPrimary:           lighten(@buttonBackgroundEndColorPrimary, 20%);
+
+@buttonBackgroundEndColorWarning:             @orange;
+@buttonBackgroundStartColorWarning:           lighten(@buttonBackgroundEndColorWarning, 20%);
+
+@buttonBackgroundEndColorSuccess:             @green;
+@buttonBackgroundStartColorSuccess:           lighten(@buttonBackgroundEndColorSuccess, 20%);
+
+@buttonBackgroundEndColorDanger:              @red;
+@buttonBackgroundStartColorDanger:            lighten(@buttonBackgroundEndColorDanger, 20%);
+
+@buttonBackgroundEndColorInfo:                @cyan;
+@buttonBackgroundStartColorInfo:              lighten(@buttonBackgroundEndColorInfo, 20%);
+
+@buttonBackgroundEndColorInverse:             @grayDarker;
+@buttonBackgroundStartColorInverse:           lighten(@buttonBackgroundEndColorInverse, 20%);
+
+
+// Hero-Unit
+// --------------------------------------------------------
+@heroUnitBackground:                          @grayLighter;

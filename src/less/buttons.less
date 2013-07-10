@@ -1,0 +1,129 @@
+// Buttons
+///////////////////////////////////////////////////////////
+
+
+// Core
+// --------------------------------------------------------
+.btn {
+  border: 1px solid #000;
+  display: inline-block;
+
+  .ie7-inline-block();
+  .ie7-restore-whitespace-left();
+  .border-radius(@baseBorderRadius);
+  .box-shadow(~"inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .1)");
+  #gradient > .button(@buttonBackgroundStartColor, @buttonBackgroundEndColor, @grayDark, 0 1px 1px rgba(255, 255, 255, .75));
+
+  cursor: pointer;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  margin-bottom: 0;
+  padding: 4px 12px;
+  text-align: center;
+  vertical-align: middle;
+
+  &:active,
+  &.active {
+    .box-shadow(~"inset 0 2px 4px rgba(0, 0, 0, .2), 0 1px 2px rgba(0, 0, 0, .1)");
+
+    outline: 0;
+  }
+
+  &.disabled,
+  &[disabled] {
+    .box-shadow(none);
+    .opacity(70);
+
+    background-image: none;
+    cursor: default;
+  }
+}
+
+
+// Sizes
+// --------------------------------------------------------
+.btn-xxlarge {
+  .border-radius(@baseBorderRadius * 2);
+
+  font-size: @baseFontSize * 2;
+  line-height: @baseLineHeight * 2;
+  padding: 8px 24px;
+}
+
+.btn-xlarge {
+  .border-radius(@baseBorderRadius * 1.75);
+
+  font-size: @baseFontSize * 1.75;
+  line-height: @baseLineHeight * 1.75;
+  padding: 7px 21px;
+}
+
+.btn-large {
+  .border-radius(@baseBorderRadius * 1.5);
+
+  font-size: @baseFontSize * 1.5;
+  line-height: @baseLineHeight * 1.5;
+  padding: 6px 18px;
+}
+
+.btn-small {
+  .border-radius(@baseBorderRadius * .85);
+
+  font-size: @baseFontSize * .85;
+  line-height: @baseLineHeight * .80;
+  padding: 4px 10px;
+}
+
+.btn-mini,
+.btn-xsmall {
+  .border-radius(@baseBorderRadius * .75);
+
+  font-size: @baseFontSize * .75;
+  line-height: @baseLineHeight * .70;
+  padding: 3px 9px;
+}
+
+
+// Block
+// --------------------------------------------------------
+.btn-block {
+  .box-sizing(border-box);
+
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+
+
+// Backgrounds
+// --------------------------------------------------------
+.btn-primary {
+  #gradient > .button(@buttonBackgroundStartColorPrimary, @buttonBackgroundEndColorPrimary, #FFFFFF, 0 -1px 0 rgba(0, 0, 0, .3));
+}
+
+.btn-warning {
+  #gradient > .button(@buttonBackgroundStartColorWarning, @buttonBackgroundEndColorWarning, #FFFFFF, 0 -1px 0 rgba(0, 0, 0, .3));
+}
+
+.btn-success {
+  #gradient > .button(@buttonBackgroundStartColorSuccess, @buttonBackgroundEndColorSuccess, #FFFFFF, 0 -1px 0 rgba(0, 0, 0, .3));
+}
+
+.btn-danger {
+  #gradient > .button(@buttonBackgroundStartColorDanger, @buttonBackgroundEndColorDanger, #FFFFFF, 0 -1px 0 rgba(0, 0, 0, .3));
+}
+
+.btn-info {
+  #gradient > .button(@buttonBackgroundStartColorInfo, @buttonBackgroundEndColorInfo, #FFFFFF, 0 -1px 0 rgba(0, 0, 0, .3));
+}
+
+.btn-inverse {
+  #gradient > .button(@buttonBackgroundStartColorInverse, @buttonBackgroundEndColorInverse, #FFFFFF, 0 -1px 0 rgba(0, 0, 0, .3));
+}

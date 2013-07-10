@@ -1,0 +1,37 @@
+// Responsive Skeleton
+///////////////////////////////////////////////////////////
+
+// 1200px - X
+// --------------------------------------------------------
+@media (min-width: 1200px) {
+  .container {
+    width: @gridWidth1200;
+  }
+}
+
+// 768px - 979px
+// --------------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+  .container {
+    width: @gridWidth768;
+  }
+}
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+// X - 767px
+// --------------------------------------------------------
+@media (max-width: 767px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container {
+    width: auto;
+  }
+}

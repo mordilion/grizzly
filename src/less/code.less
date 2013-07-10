@@ -1,0 +1,49 @@
+// Code
+///////////////////////////////////////////////////////////
+
+// Core
+// --------------------------------------------------------
+code,
+pre {
+  background-color: @grayXLight;
+  border: 1px solid @grayLighter;
+  color: @grayDark;
+  font-family: @codeFontFamily;
+  padding: 2px 4px;
+}
+
+// Inline
+// --------------------------------------------------------
+code {
+  .border-radius(2px);
+
+  color: @red;
+  font-size: 85%;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+
+// Block
+// --------------------------------------------------------
+pre {
+  .border-radius(@baseBorderRadius);
+
+  display: block;
+  line-height: @baseLineHeight;
+  margin-bottom: @baseLineHeight / 2;
+  padding: @baseLineHeight / 2;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+
+  code {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    padding: 0;
+    white-space: pre;
+    white-space: pre-wrap;
+  }
+}

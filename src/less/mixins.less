@@ -1,0 +1,214 @@
+// Mixins
+///////////////////////////////////////////////////////////
+
+// Clearfix
+// --------------------------------------------------------
+.clearfix() {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    line-height: 0;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+.clearfix {
+  .clearfix();
+}
+
+
+// Border-Radius
+// --------------------------------------------------------
+.border-radius(@radius) {
+          border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+       -o-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+
+// Grid
+// --------------------------------------------------------
+.spans(@gutterWidth, @gridWidth, @mode) when (@mode = normal) {
+  display: block;
+  float: left;
+  margin-left: @gutterWidth / 2;
+  margin-right: @gutterWidth / 2;
+  min-height: 1px;
+}
+.spans(@gutterWidth, @gridWidth, @mode) when (@mode = fluid) {
+  display: block;
+  float: left;
+  margin-left: percentage((@gutterWidth / @gridWidth) / 2);
+  margin-right: percentage((@gutterWidth / @gridWidth) / 2);
+  min-height: 1px;
+}
+.spans(@gutterWidth, @gridWidth, @mode) when (@mode = auto) {
+  display: block;
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+  min-height: 1px;
+  width: 100%;
+}
+
+.span(@columnCount, @columnWidth, @gutterWidth, @gridWidth, @fluid) when (@fluid = false) {
+  width: (@columnWidth * @columnCount) + (@gutterWidth * (@columnCount - 1));
+}
+.span(@columnCount, @columnWidth, @gutterWidth, @gridWidth, @fluid) when (@fluid = true) {
+  width: (percentage(@columnWidth / @gridWidth) * @columnCount) + percentage((@gutterWidth * (@columnCount - 1)) / @gridWidth);
+}
+
+.spanX(@index, @columnWidth, @gutterWidth, @gridWidth, @fluid) when (@index > 0) {
+  .span@{index} {
+    .span(@index, @columnWidth, @gutterWidth, @gridWidth, @fluid);
+  }
+  .spanX(@index - 1, @columnWidth, @gutterWidth, @gridWidth, @fluid);
+}
+
+.offset(@columnCount, @columnWidth, @gutterWidth, @gridWidth, @fluid) when (@fluid = false) {
+  margin-left: (@columnWidth * @columnCount) + (@gutterWidth * @columnCount) + (@gutterWidth / 2);
+}
+.offset(@columnCount, @columnWidth, @gutterWidth, @gridWidth, @fluid) when (@fluid = true) {
+  margin-left: (percentage(@columnWidth / @gridWidth) * @columnCount) + percentage((@gutterWidth * @columnCount) / @gridWidth) + percentage((@gutterWidth / @gridWidth) / 2);
+}
+
+.offsetFirstChild(@columnCount, @columnWidth, @gutterWidth, @gridWidth, @fluid) when (@fluid = true) {
+  margin-left: (percentage(@columnWidth / @gridWidth) * @columnCount) + percentage((@gutterWidth * @columnCount) / @gridWidth);
+}
+
+.offsetX (@index, @columnWidth, @gutterWidth, @gridWidth, @fluid) when (@index > 0) {
+  .offset@{index} {
+    .offset(@index, @columnWidth, @gutterWidth, @gridWidth, @fluid);
+  }
+  .offset@{index}:first-child {
+    .offsetFirstChild(@index, @columnWidth, @gutterWidth, @gridWidth, @fluid);
+  }
+  .offsetX(@index - 1, @columnWidth, @gutterWidth, @gridWidth, @fluid);
+}
+
+
+// Gradients
+// --------------------------------------------------------
+#gradient {
+  .horizontal(@startColor, @endColor) {
+    background-color: @endColor;
+    background-image: -moz-linear-gradient(left, @startColor, @endColor);
+    background-image: -ms-linear-gradient(left, @startColor, @endColor);
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+    background-image: -o-linear-gradient(left, @startColor, @endColor);
+    background-image: linear-gradient(to right, @startColor, @endColor);
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)", argb(@startColor), argb(@endColor)));
+  }
+
+  .vertical(@startColor, @endColor) {
+    background-color: mix(@startColor, @endColor, 50%);
+    background-image: -moz-linear-gradient(top, @startColor, @endColor);
+    background-image: -ms-linear-gradient(top, @startColor, @endColor);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+    background-image: -o-linear-gradient(top, @startColor, @endColor);
+    background-image: linear-gradient(to bottom, @startColor, @endColor);
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", argb(@startColor), argb(@endColor)));
+  }
+
+  .bar(@startColor, @endColor, @textColor, @textShadow) {
+    color: @textColor;
+    text-shadow: @textShadow;
+    #gradient > .vertical(@startColor, @endColor);
+    border-color: @endColor @endColor darken(@endColor, 15%);
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) fadein(rgba(0, 0, 0, .1), 15%);
+  }
+
+  .button(@startColor, @endColor, @textColor, @textShadow) {
+    .bar(@startColor, @endColor, @textColor, @textShadow);
+    //*background-color: @endColor;
+    .reset-filter();
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.disabled,
+    &[disabled] {
+      color: @textColor;
+      background-color: @endColor;
+      //*background-color: darken(@endColor, 5%);
+      background-image: none;
+      text-decoration: none;
+    }
+
+    &:active,
+    &.active {
+      background-color: darken(@endColor, 10%) e("\9");
+    }
+  }
+}
+
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+
+// Shadows
+// --------------------------------------------------------
+.box-shadow(@shadow) {
+          box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+      -ms-box-shadow: @shadow;
+       -o-box-shadow: @shadow;
+  -webkit-box-shadow: @shadow;
+}
+
+
+
+// Opacity
+// --------------------------------------------------------
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+
+
+// Box-Sizing
+// --------------------------------------------------------
+.box-sizing(@boxmodel) {
+          box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+      -ms-box-sizing: @boxmodel;
+       -o-box-sizing: @boxmodel;
+  -webkit-box-sizing: @boxmodel;
+}
+
+
+// IE7 Fixes
+// --------------------------------------------------------
+.ie7-inline-block() {
+  *display: inline;
+  *zoom: 1;
+}
+
+.ie7-restore-whitespace-left() {
+  *margin-left: .3em;
+
+  &:first-child {
+    *margin-left: 0;
+  }
+}
+
+.ie7-restore-whitespace-right() {
+  *margin-right: .3em;
+
+  &:last-child {
+    *margin-right: 0;
+  }
+}

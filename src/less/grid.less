@@ -1,0 +1,73 @@
+// Grid System
+///////////////////////////////////////////////////////////
+
+// Rows
+// --------------------------------------------------------
+.row,
+.row12,
+.row-fluid,
+.row12-fluid {
+  .clearfix();
+}
+
+.row,
+.row12 {
+  *zoom: 1;
+}
+
+.row-fluid,
+.row12-fluid {
+  width: 100%;
+}
+
+.row,
+.row12 {
+  margin-left: (@grid12GutterWidth / 2) * -1;
+  margin-right: (@grid12GutterWidth / 2) * -1;
+}
+
+// Spans
+// --------------------------------------------------------
+.row,
+.row12 {
+  [class*="span"] {
+    .spans(@grid12GutterWidth, @gridWidth, normal);
+  }
+}
+
+.spanX(12, @grid12ColumnWidth, @grid12GutterWidth, @gridWidth, false);
+
+.row-fluid,
+.row12-fluid {
+  [class*="span"] {
+    .spans(@grid12GutterWidth, @gridWidth, fluid);
+  }
+  [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  [class*="span"]:last-child {
+    margin-right: 0;
+  }
+  .spanX(12, @grid12ColumnWidth, @grid12GutterWidth, @gridWidth, true);
+}
+
+[class*="span"].pull-left {
+  float: left;
+}
+
+[class*="span"].pull-right {
+  float: right;
+}
+
+
+// Offsets
+// --------------------------------------------------------
+.row,
+.row12 {
+  .offsetX(12, @grid12ColumnWidth, @grid12GutterWidth, @gridWidth, false);
+}
+
+.row-fluid,
+.row12-fluid {
+  .offsetX(12, @grid12ColumnWidth, @grid12GutterWidth, @gridWidth, true);
+}
