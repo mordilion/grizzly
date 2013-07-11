@@ -512,9 +512,9 @@ ol {
   padding: 0;
 }
 ul ul,
+ol ul,
 ul ol,
-ol ol,
-ol ul {
+ol ol {
   margin-bottom: 0;
 }
 li {
@@ -1945,6 +1945,9 @@ pre code {
   margin-bottom: 20px;
   margin-left: 0;
 }
+.nav > li > a {
+  display: block;
+}
 .nav > .pull-right {
   float: right;
 }
@@ -1972,9 +1975,6 @@ pre code {
 .nav-horizontal > li {
   float: left;
   padding-right: 12px;
-}
-.nav > li > a {
-  display: block;
 }
 .nav-tabs,
 .nav-pills {
@@ -2016,8 +2016,8 @@ pre code {
   padding-right: 12px;
 }
 .nav-tabs > li > a:hover,
-.nav-tabs > li > a:focus,
 .nav-pills > li > a:hover,
+.nav-tabs > li > a:focus,
 .nav-pills > li > a:focus {
   background: #eeeeee;
   text-decoration: none;
@@ -2068,6 +2068,12 @@ pre code {
 .nav-pills > .active > a:focus {
   background-color: #2070b0;
   color: #ffffff;
+}
+.nav-stacked > li {
+  float: none;
+}
+.nav-stacked > a {
+  margin-right: 0;
 }
 .nav > .disabled > a {
   color: #bbbbbb;
