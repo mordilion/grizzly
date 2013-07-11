@@ -48,12 +48,12 @@
       margin-right: 4px;
       padding-left: 12px;
       padding-right: 12px;
-    }
 
-    > a:hover,
-    > a:focus {
-      background: @grayLightest;
-      text-decoration: none;
+      &:hover,
+      &:focus {
+        background: @grayLightest;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -80,14 +80,15 @@
   }
 
   > .active {
-    > a,
-    > a:hover,
-    > a:focus {
-      background-color: @bodyBackground;
-      border: 1px solid @grayLighter;
-      border-bottom-color: transparent;
-      color: @gray;
-      cursor: default;
+    > a {
+      &:hover,
+      &:focus {
+        background-color: @bodyBackground;
+        border: 1px solid @grayLighter;
+        border-bottom-color: transparent;
+        color: @gray;
+        cursor: default;
+      }
     }
   }
 }
@@ -105,11 +106,12 @@
   }
 
   > .active {
-    > a,
-    > a:hover,
-    > a:focus {
-      background-color: @hyperlinkTextColor;
-      color: @white;
+    > a {
+      &:hover,
+      &:focus {
+        background-color: @hyperlinkTextColor;
+        color: @white;
+      }
     }
   }
 }
