@@ -2043,6 +2043,7 @@ pre code {
 .nav-tabs > li > a:focus {
   border-color: #eeeeee #eeeeee #dddddd;
 }
+.nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
   background-color: #ffffff;
@@ -2062,6 +2063,7 @@ pre code {
   padding-bottom: 8px;
   padding-top: 8px;
 }
+.nav-pills > .active > a,
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
   background-color: #2070b0;
