@@ -120,10 +120,39 @@
 .nav-stacked {
   > li {
     float: none;
+
+    > a {
+      margin-right: 0;
+    }
   }
 
-  > a {
-    margin-right: 0;
+  &.nav-tabs {
+    border-bottom: none;
+
+    > li {
+      > a {
+        .border-radius(0);
+
+        border: 1px solid @grayLighter;
+
+        &:hover,
+        &:focus {
+          border-color: @grayLighter;
+        }
+      }
+
+      &:first-child {
+        > a {
+          .border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+        }
+      }
+
+      &:last-child {
+        > a {
+          .border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+        }
+      }
+    }
   }
 }
 

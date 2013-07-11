@@ -2072,8 +2072,37 @@ pre code {
 .nav-stacked > li {
   float: none;
 }
-.nav-stacked > a {
+.nav-stacked > li > a {
   margin-right: 0;
+}
+.nav-stacked.nav-tabs {
+  border-bottom: none;
+}
+.nav-stacked.nav-tabs > li > a {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -webkit-border-radius: 0;
+  border: 1px solid #dddddd;
+}
+.nav-stacked.nav-tabs > li > a:hover,
+.nav-stacked.nav-tabs > li > a:focus {
+  border-color: #dddddd;
+}
+.nav-stacked.nav-tabs > li:first-child > a {
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+}
+.nav-stacked.nav-tabs > li:last-child > a {
+  border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
 }
 .nav > .disabled > a {
   color: #bbbbbb;
