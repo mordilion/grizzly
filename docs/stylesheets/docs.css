@@ -1,0 +1,58 @@
+#header {
+  padding-top: 20px;
+}
+
+#footer {
+  background: #f5f5f5;
+  border-top: 1px solid #dddddd;
+  margin-top: 60px;
+  padding: 30px 0;
+}
+
+#hero-grizzly {
+  background: #6d0019;
+  background: -moz-linear-gradient(top,  #a90329 0%, #6d0019 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(100%,#6d0019));
+  background: -webkit-linear-gradient(top,  #a90329 0%,#6d0019 100%);
+  background: -o-linear-gradient(top,  #a90329 0%,#6d0019 100%);
+  background: -ms-linear-gradient(top,  #a90329 0%,#6d0019 100%);
+  background: linear-gradient(to bottom,  #a90329 0%,#6d0019 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+
+  color: #fff;
+}
+
+#hero-grizzly h1 {
+  color: #fff;
+}
+
+.marketing {
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: 200;
+}
+
+.marketing p {
+  font-size: 16px;
+}
+
+.show-grid {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.show-grid [class*="span"] {
+  background-color: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  min-height: 40px;
+  text-align: center;
+
+          border-radius: 4px;
+     -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+       -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
