@@ -147,13 +147,13 @@
 
       &:first-child {
         > a {
-          .border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+          .border-top-radius(@baseBorderRadius);
         }
       }
 
       &:last-child {
         > a {
-          .border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+          .border-bottom-radius(@baseBorderRadius);
         }
       }
     }
