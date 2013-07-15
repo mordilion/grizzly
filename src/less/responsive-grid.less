@@ -12,6 +12,8 @@
     [class*="span"] {
       .spans(@grid12GutterWidth1200, @gridWidth1200, normal);
     }
+
+    .offsetX(12, @grid12ColumnWidth1200, @grid12GutterWidth1200, @gridWidth1200, false);
   }
 
   .spanX(12, @grid12ColumnWidth1200, @grid12GutterWidth1200, @gridWidth1200, false);
@@ -27,7 +29,9 @@
     [class*="span"]:last-child {
       margin-right: 0;
     }
+
     .spanX(12, @grid12ColumnWidth1200, @grid12GutterWidth1200, @gridWidth1200, true);
+    .offsetX(12, @grid12ColumnWidth1200, @grid12GutterWidth1200, @gridWidth1200, true);
   }
 }
 
@@ -43,6 +47,8 @@
     [class*="span"] {
       .spans(@grid12GutterWidth768, @gridWidth768, normal);
     }
+
+    .offsetX(12, @grid12ColumnWidth768, @grid12GutterWidth768, @gridWidth768, false);
   }
 
   .spanX(12, @grid12ColumnWidth768, @grid12GutterWidth768, @gridWidth768, false);
@@ -58,7 +64,9 @@
     [class*="span"]:last-child {
       margin-right: 0;
     }
+
     .spanX(12, @grid12ColumnWidth768, @grid12GutterWidth768, @gridWidth768, true);
+    .offsetX(12, @grid12ColumnWidth768, @grid12GutterWidth768, @gridWidth768, true);
   }
 }
 
