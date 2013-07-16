@@ -26,6 +26,8 @@
   color: #fff;
 }
 
+
+/* .marketing */
 .marketing {
   text-align: center;
 }
@@ -38,6 +40,8 @@
   font-size: 16px;
 }
 
+
+/* .show-grid */
 .show-grid {
   margin-bottom: 20px;
   margin-top: 10px;
@@ -45,7 +49,6 @@
 
 .show-grid [class*="span"] {
   background-color: #f0f0f0;
-  height: 40px;
   line-height: 40px;
   min-height: 40px;
   text-align: center;
@@ -55,4 +58,36 @@
       -ms-border-radius: 4px;
        -o-border-radius: 4px;
   -webkit-border-radius: 4px;
+}
+
+.show-grid [class*="span"]:hover {
+  background-color: #e0e0e0;
+}
+
+.show-grid [class*="span"] [class*="span"] {
+  background-color: #d0d0d0;
+}
+
+.show-grid [class*="span"] [class*="span"]:hover {
+  background-color: #c0c0c0;
+}
+
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/* .prettyprint */
+pre.prettyprint {
+  border: 1px solid #dddddd;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+
+
+@media (max-width: 767px) {
+  .show-grid [class*="span"] {
+    margin-bottom: 5px;
+  }
 }
