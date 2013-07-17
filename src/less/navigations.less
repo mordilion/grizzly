@@ -34,6 +34,56 @@
 }
 
 
+// Header
+// --------------------------------------------------------
+.nav-header {
+  color: @grayLight;
+  display: block;
+  font-size: @baseFontSize * .80;
+  font-weight: bold;
+  line-height: @baseLineHeight;
+  padding: 4px 12px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  text-transform: uppercase;
+}
+
+.nav li + .nav-header {
+  margin-top: 10px;
+}
+
+
+// List
+// --------------------------------------------------------
+.nav-list {
+  margin-bottom: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  
+  > li > a,
+  .nav-header {
+    margin-left: -12px;
+    margin-right: -12px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  }
+
+  > li {
+    > a {
+      padding: 4px 12px;
+    }
+  }
+
+  > .active {
+    > a,
+    > a:hover,
+    > a:focus {
+      background-color: @hyperlinkTextColor;
+      color: @white;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+    }
+  }
+}
+
+
 // Tabs and Pills
 // --------------------------------------------------------
 .nav-tabs,
