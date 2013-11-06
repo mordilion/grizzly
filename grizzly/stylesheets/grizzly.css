@@ -70,13 +70,10 @@ audio:not([controls]) {
 html {
   font-family: sans-serif;
   /* 1 */
-
   -ms-text-size-adjust: 100%;
   /* 2 */
-
   -webkit-text-size-adjust: 100%;
   /* 2 */
-
 }
 /**
  * Remove default margin.
@@ -231,10 +228,8 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-
   padding: 0;
   /* 2 */
-
 }
 /**
  * 1. Correct font family not being inherited in all browsers.
@@ -247,13 +242,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
-
   font-size: 100%;
   /* 2 */
-
   margin: 0;
   /* 3 */
-
 }
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -286,10 +278,8 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-
   cursor: pointer;
   /* 3 */
-
 }
 /**
  * Re-set default cursor for disabled elements.
@@ -306,10 +296,8 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-
   padding: 0;
   /* 2 */
-
 }
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
@@ -319,11 +307,9 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
-
   box-sizing: content-box;
 }
 /**
@@ -349,10 +335,8 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   /* 1 */
-
   vertical-align: top;
   /* 2 */
-
 }
 /* ==========================================================================
    Tables
@@ -2492,30 +2476,6 @@ input[type="button"].btn-block {
 .btn-inverse:active,
 .btn-inverse.active {
   background-color: #080808 \9;
-}
-.hero-unit {
-  background: #dddddd;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 30px;
-  margin-bottom: 25px;
-  padding: 50px;
-}
-.hero-unit h1 {
-  font-size: 70px;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-.hero-unit li {
-  line-height: 30px;
-}
-.container .hero-unit,
-.container-fluid .hero-unit {
-  border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-  -webkit-border-radius: 12px;
 }
 .pull-left {
   float: left;
